@@ -1,5 +1,3 @@
-# networking-module/variables.tf
-
 variable "client_id" {
   description = "The Client ID for the service principal."
   type        = string
