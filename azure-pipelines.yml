@@ -14,5 +14,4 @@ steps:
       containerRegistry: 'agitated_banach'
       command: 'buildAndPush'
       repository: 'smnostuff/devopsimage'
-      tags: 'latest'
       Dockerfile: '**/dockerfile'
