@@ -17,9 +17,8 @@ jobs:
       includePreviewVersions: true
 
   - task: Docker@2
-    displayName: 'Build and Push Docker Image'
     inputs:
       command: 'buildAndPush'
       repository: 'smnostuff/devopsimage'
       tags: 'latest'
-      Dockerfile: '**/Dockerfile'
+      Dockerfile: '**/dockerfile'
