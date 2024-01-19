@@ -15,3 +15,10 @@ steps:
       command: 'buildAndPush'
       repository: 'smnostuff/devopsimage'
       Dockerfile: '**/dockerfile'
+  - task: KubernetesManifest@1
+    inputs:
+      action: 'deploy'
+      connectionType: 'AzureResourceManager'
+      kubernetesServiceConnection: 'DevOpsKub'
+      namespace: 'DevOpsKubernetes'
+      manifests: 'application-manifest.yaml'
