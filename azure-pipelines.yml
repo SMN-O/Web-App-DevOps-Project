@@ -5,19 +5,13 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
+  parrallel:1
 
-jobs:
-- job: BuildAndPushDockerImage
-  displayName: 'Build and Push Docker Image'
-  steps:
-  - task: UseDotNet@2
-    displayName: 'Use .NET Core SDK'
-    inputs:
-      version: '3.x'
-      includePreviewVersions: true
 
+steps:
   - task: Docker@2
     inputs:
+      containerRegistry: 'DevOps Docker'
       command: 'buildAndPush'
       repository: 'smnostuff/devopsimage'
       tags: 'latest'
