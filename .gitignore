@@ -6,3 +6,4 @@ aks-terraform/kubeconfig.yaml
 aks-terraform/networking-module/.terraform.lock.hcl        
 aks-terraform/networking-module/.terraform/
 aks-terraform/terraform.tfstate
+.DS_Store
