@@ -15,4 +15,13 @@ steps:
       command: 'buildAndPush'
       Dockerfile: '**/Dockerfile'
       tags: 'latest'
+  - task: KubernetesManifest@1
+    inputs:
+      action: 'deploy'
+      connectionType: 'azureResourceManager'
+      azureSubscriptionConnection: 'Simon Yates DevOps(069aabee-fed9-4d93-8b03-d24c331f52ad)'
+      azureResourceGroup: 'DevOpsResource'
+      kubernetesCluster: 'DevOpsCluster'
+      namespace: 'DevOpsKubernetes'
+      manifests: 'application-manifest.yaml'
 
