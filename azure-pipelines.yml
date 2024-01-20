@@ -19,7 +19,7 @@ steps:
     inputs:
       action: 'deploy'
       connectionType: 'AzureResourceManager'
-      azureSubscriptionConnection: 'Azure subscription 1'
+      azureSubscriptionConnection: 'DevOpsProject'
       azureResourceGroup: 'DevOps'
       kubernetesCluster: 'DevOpsKub'
       manifests: 'application-manifest.yaml'
