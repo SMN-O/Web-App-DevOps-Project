@@ -7,11 +7,12 @@ pool:
   vmImage: 'ubuntu-latest'
   parrallel: 1
 
-- task: Docker@2
-  inputs:
-    containerRegistry: 'docker hub connection'
-    repository: 'smnostuff/devopsimage'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
-    tags: 'latest'
+steps:
+  - task: Docker@2
+    inputs:
+      containerRegistry: 'docker hub connection'
+      repository: 'smnostuff/devopsimage'
+      command: 'buildAndPush'
+      Dockerfile: '**/Dockerfile'
+      tags: 'latest'
 
