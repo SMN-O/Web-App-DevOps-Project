@@ -20,6 +20,6 @@ steps:
       action: 'deploy'
       connectionType: 'AzureResourceManager'
       azureSubscriptionConnection: 'AiCore'
-      azureResourceGroup: 'DevOps'
+      azureResourceGroup: 'ResourceGroup'
       kubernetesCluster: 'DevOpsKub'
       manifests: 'application-manifest.yaml'
